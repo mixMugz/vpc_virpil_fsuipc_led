@@ -19,7 +19,7 @@ local Pollrate = 25
 ----------------------------------------------------
 local dev, rd, wrf, wr, init = com.openhid(VID, PID, Device, Report)
 if dev == 0 then
-  ipc.log("Could not open HID for device: " .. Name)
+  ipc.log("Could not open HID for device: "..Name)
   ipc.exit()
 end
 
@@ -27,7 +27,7 @@ end
 local init = true
 local apOn, onGround, parkBrake
 local led = {} -- Default state for LED's
-led.g1  = "00" -- Grip 1
+led.g1 = "00" -- Grip 1
 
 ----------------------------------------------------
 function Poll(time)
@@ -43,9 +43,9 @@ end
 function checkAutoPilot()
   apOn = ipc.readUD(0x07BC)
   if apOn == 1 then
-    led.g1 = VPC.Color.L100
+    led.g1 = VPC.Color.G100
   else
-    led.g1 = VPC.Color.O100
+    led.g1 = VPC.Color.B100
   end
 end
 
@@ -54,12 +54,12 @@ function checkParkingBrake()
   if parkBrake == 32767 then
     led.g1 = VPC.Blink(VPC.Color.BLK,VPC.Color.R100,10)
   else
-    led.g1 = VPC.Color.S100
+    led.g1 = VPC.Color.O100
   end
 end
 
 function WriteLEDState()
-  com.writefeature(dev, VPC.toByte(VPC.LEDs.Grip_Set .. led.g1), wrf)
+  com.writefeature(dev, VPC.toByte(VPC.LEDs.Grip_Set..led.g1), wrf)
 end
 
 function ResetLEDState()

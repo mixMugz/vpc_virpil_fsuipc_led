@@ -46,25 +46,25 @@ end
 function checkAutoPilot()
   apOn = ipc.readUD(0x07BC)
   if apOn == 1 then
-    led.b6 = VPC.Color.L60
+    led.b6 = VPC.Color.G60
   else
     led.b6 = VPC.Color.BLK
   end
   apFD = ipc.readUD(0x2EE0)
   if apFD == 1 then
-    led.b3 = apOn == 1 and VPC.Color.L60 or VPC.Color.O60
+    led.b3 = apOn == 1 and VPC.Color.G60 or VPC.Color.B60
   else
     led.b3 = VPC.Color.BLK
   end
   apYD = ipc.readUD(0x0808)
   if apYD == 1 then
-    led.b2 = apOn == 1 and VPC.Color.L60 or VPC.Color.O60
+    led.b2 = apOn == 1 and VPC.Color.G60 or VPC.Color.B60
   else
     led.b2 = VPC.Color.BLK
   end
   apNav1 = ipc.readUD(0x07C4)
   if apNav1 == 1 then
-    led.b1 = apOn == 1 and VPC.Color.L60 or VPC.Color.O60
+    led.b1 = apOn == 1 and VPC.Color.G60 or VPC.Color.B60
   else
     led.b1 = VPC.Color.BLK
   end
@@ -72,16 +72,16 @@ function checkAutoPilot()
   apGS = ipc.readUB(0x0C7C)
   if apApr == 1 then
     if apGS == 1 then
-      led.b4 = apOn == 1 and VPC.Blink(VPC.Color.S60,VPC.Color.L60,10) or VPC.Color.O60
+      led.b4 = apOn == 1 and VPC.Blink(VPC.Color.G30,VPC.Color.G60,10) or VPC.Color.B60
     else
-      led.b4 = apOn == 1 and VPC.Color.L60 or VPC.Color.O60
+      led.b4 = apOn == 1 and VPC.Color.G60 or VPC.Color.B60
     end
   else
     led.b4 = VPC.Color.BLK
   end
   apBC = ipc.readUD(0x0804)
   if apBC == 1 then
-    led.b5 = apOn == 1 and VPC.Color.L60 or VPC.Color.O60
+    led.b5 = apOn == 1 and VPC.Color.G60 or VPC.Color.B60
   else
     led.b5 = VPC.Color.BLK
   end
