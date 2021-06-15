@@ -19,7 +19,7 @@ local Pollrate = 25
 ----------------------------------------------------
 local dev, rd, wrf, wr, init = com.openhid(VID, PID, Device, Report)
 if dev == 0 then
-  ipc.log("Could not open HID for device: " .. Name)
+  ipc.log("Could not open HID for device: "..Name)
   ipc.exit()
 end
 
@@ -96,7 +96,7 @@ function GearStatus()
 end
 
 function WriteLEDState()
-  com.writefeature(dev, VPC.toByte(VPC.LEDs.Base_Set .. led.b1 .. led.b2 .. led.b3 .. led.b4 .. led.b5 .. led.b6 .. led.b7 .. led.b8 .. led.b9 .. led.b10 .. led.b11 .. led.b12 .. led.b13 .. led.b14 .. led.b15 .. led.b16 .. led.b17), wrf)
+  com.writefeature(dev, VPC.toByte(VPC.LEDs.Base_Set..led.b1..led.b2..led.b3..led.b4..led.b5..led.b6..led.b7..led.b8..led.b9..led.b10..led.b11..led.b12..led.b13..led.b14..led.b15..led.b16..led.b17), wrf)
 end
 
 function ResetLEDState()
