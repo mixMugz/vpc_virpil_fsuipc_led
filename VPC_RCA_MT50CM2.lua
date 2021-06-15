@@ -45,7 +45,7 @@ function checkAutoPilot()
   if apOn == 1 then
     led.g1 = VPC.Color.L100
   else
-    led.g1 = VPC.Color.S100
+    led.g1 = VPC.Color.O100
   end
 end
 
@@ -54,7 +54,7 @@ function checkParkingBrake()
   if parkBrake == 32767 then
     led.g1 = VPC.Blink(VPC.Color.BLK,VPC.Color.R100,10)
   else
-    led.g1 = VPC.Color.O100
+    led.g1 = VPC.Color.S100
   end
 end
 
