@@ -4,18 +4,18 @@ Required: Full version of [FSUIPC7](http://www.fsuipc.com/) by Pete & John Dowso
 
 ## Realized LED:
 **- VPC Constellation Alpha Grip color**
-1. Aircraft on ground - Blue color
+1. Aircraft on ground - Orange color
 2. Aircraft on ground, parking brake on - Blink Black/Red color
-3. Aircraft in flight, autopilot off - Orange color
+3. Aircraft in flight, autopilot off - Blue color
 4. Aircraft in flight, autopilot on - Green color
 
 **- VPC Throttle color**
 1. Default state (turned off) black color
-2. Autopilot FMS NAV Hold ON - B1 Green (if AP off - Orange)
-3. Yaw Damper ON - B2 Green (if AP off - Orange)
-4. Flight Director ON - B3 Green (if AP off - Orange)
-5. Autopilot Approach mode ON B4 Green, GS Captured - Blink Blue/Green (if AP off - Orange)
-6. Autopilot Back Course ON - B5 Green (if AP off - Orange)
+2. Autopilot FMS NAV Hold ON - B1 Green (if AP off - Blue)
+3. Yaw Damper ON - B2 Green (if AP off - Blue)
+4. Flight Director ON - B3 Green (if AP off - Blue)
+5. Autopilot Approach mode ON B4 Green, GS Captured - Blink Green/Bright Green (if AP off - Blue)
+6. Autopilot Back Course ON - B5 Green (if AP off - Blue)
 7. Autopilot Master ON - B6 Green
 
 **- VPC Panel #2 color**
